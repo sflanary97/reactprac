@@ -1,0 +1,27 @@
+{
+  "name": "course-directory",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "1.0.6",
+    "concurrently": "^3.5.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.194.0",
+    "react": "^15.5.4",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.2.2",
+    "express": "^4.16.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "proxy": "http://localhost:5000/"
+}
